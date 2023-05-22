@@ -1,0 +1,21 @@
+.search {
+    &__input {
+        margin: 2em 0 3em;
+
+        &-country,
+        &-continent {
+            padding: 1.2em 1.5em;
+            border: none;
+            border-radius: 5px;
+        }
+
+        &-country {
+            width: 100%;
+        }
+
+        &-continent {
+            position: relative;
+            width: 60%;
+        }
+    }
+}

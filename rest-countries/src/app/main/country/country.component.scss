@@ -1,0 +1,26 @@
+.card {
+    border-radius: 5px;
+    background-color: aqua;
+    margin: 4em auto;
+    width: auto;
+    max-width: 250px;
+
+    &__top {
+        background-color: green;
+        height: 130px;
+    }
+
+    &__bottom {
+        padding: 2em 1em;
+    }
+
+    &__title {
+        margin-bottom: 0.5em;
+    }
+
+    &__info {
+        &-detail {
+            font-weight: 600;
+        }
+    }
+}

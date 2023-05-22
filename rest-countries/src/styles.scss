@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+    --dark-mode-elements: hsl(209, 23%, 22%);
+    --dark-mode-background: hsl(207, 26%, 17%);
+    --light-mode-text: hsl(200, 15%, 8%);
+    --light-mode-input:  hsl(0, 0%, 52%);
+    --light-mode-background: hsl(0, 0%, 98%);
+    --dark-mode-text: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: yellow;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px; 
+}
