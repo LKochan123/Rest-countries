@@ -1,21 +1,54 @@
 .search {
-    &__input {
+    &__box {
         margin: 2em 0 3em;
 
-        &-country,
-        &-continent {
-            padding: 1.2em 1.5em;
-            border: none;
-            border-radius: 5px;
-        }
-
-        &-country {
+        &--one {
             width: 100%;
+            padding: 0.5em;
+            background-color: var(--dark-mode-text);
+            border-radius: 8px;
+        }
+    }
+
+    &__icon {
+        font-size: 1.2rem;
+        margin: 0 1em 0 2em;
+    }
+
+    &__input {
+        padding: 1em;
+        border: none;
+    }
+
+    &__select {
+        width: 60%;
+        padding: 1.2em;
+        background-color: var(--dark-mode-text);
+        border: none;
+        border-radius: 8px;
+    }
+}
+
+@media (min-width: 768px) {
+    .search {
+        margin-top: 2em;
+
+        &__form {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
         }
 
-        &-continent {
-            position: relative;
-            width: 60%;
+        &__box--one {
+            width: 400px;
+        }
+
+        &__input {
+            width: 80%;
+        }
+
+        &__select {
+            width: 200px;
         }
     }
 }

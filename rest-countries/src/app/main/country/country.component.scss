@@ -1,24 +1,35 @@
 .card {
-    border-radius: 5px;
-    background-color: aqua;
-    margin: 4em auto;
+    margin: 2em;
     width: auto;
-    max-width: 250px;
+    min-width: 250px;
+    max-width: 270px;
 
     &__top {
+        height: 170px;
         background-color: green;
-        height: 130px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
     }
 
     &__bottom {
-        padding: 2em 1em;
+        padding: 3em 1.5em;
+        background-color: var(--dark-mode-text);
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
     }
 
     &__title {
-        margin-bottom: 0.5em;
+        font-size: 1.5rem;
+        margin-bottom: 1em;
     }
 
     &__info {
+        font-size: 1.3rem;
+    }
+
+    &__text {
+        margin: 0.5em 0;
+
         &-detail {
             font-weight: 600;
         }
