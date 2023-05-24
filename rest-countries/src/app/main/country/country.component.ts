@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CountryService } from './country.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-country',
@@ -7,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class CountryComponent {
 
+  @Input() country: any;
 }

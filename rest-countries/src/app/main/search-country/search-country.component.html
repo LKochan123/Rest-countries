@@ -11,10 +11,15 @@
     
             <div class="search__box">
                 <select class="search__select">
-                    <option disabled selected>Filter by Region</option>
+                    <option 
+                        disabled 
+                        selected 
+                        value="0">
+                        Filter by Region
+                    </option>
                     <option 
                         *ngFor="let continent of continentArr"
-                        value="{{continent | lowercase}}" >
+                        value="{{ continent | lowercase }}" >
                         {{ continent }}
                     </option>
                 </select>

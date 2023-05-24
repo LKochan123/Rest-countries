@@ -1,18 +1,26 @@
 .card {
     margin: 2em;
-    width: auto;
-    min-width: 250px;
-    max-width: 270px;
+    width: 250px;
+    cursor: pointer;
+    transition: transform .3s;
+
+    &:hover {
+        transform: scale(0.95);
+    }
 
     &__top {
-        height: 170px;
-        background-color: green;
+        height: 160px;
+    }
+
+    &__img {
+        height: 160px;
+        width: 100%;
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
     }
 
     &__bottom {
-        padding: 3em 1.5em;
+        padding: 2em 1em;
         background-color: var(--dark-mode-text);
         border-bottom-left-radius: 8px;
         border-bottom-right-radius: 8px;

@@ -6,6 +6,10 @@ import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
 import { SearchCountryComponent } from './main/search-country/search-country.component';
 import { CountryComponent } from './main/country/country.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
+import { CountryDetailComponent } from './country-detail/country-detail.component';
+import { ContinentPipe } from './pipes/continent.pipe';
 
 @NgModule({
   declarations: [
@@ -13,10 +17,14 @@ import { CountryComponent } from './main/country/country.component';
     HeaderComponent,
     MainComponent,
     SearchCountryComponent,
-    CountryComponent
+    CountryComponent,
+    CountryDetailComponent,
+    ContinentPipe
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

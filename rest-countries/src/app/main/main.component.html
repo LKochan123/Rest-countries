@@ -1,9 +1,7 @@
 <app-search-country></app-search-country>
 <main class="countries wrapper">
-    <app-country></app-country>
-    <app-country></app-country>
-    <app-country></app-country>
-    <app-country></app-country>
-    <app-country></app-country>
-    <app-country></app-country>
+    <app-country 
+        *ngFor="let country of allCountries | ContinentPipe:'South America' "
+        [country]="country">
+    </app-country>
 </main>

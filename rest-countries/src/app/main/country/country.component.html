@@ -1,18 +1,21 @@
-<div class="card">
+<div class="card" [routerLink]="'/' + country.name.common">
     <div class="card__top">
-        <img src="" alt="" class="card__img">
+        <img 
+            [src]="country.flags.png"
+            [alt]="country.flags.alt" 
+            class="card__img">
     </div>
     <div class="card__bottom">
-        <h3 class="card__title">United States of America</h3>
+        <h3 class="card__title">{{ country.name.common }}</h3>
         <div class="card__info">
             <p class="card__text">
-                <span class="card__text-detail">Population:</span> 2131231
+                <span class="card__text-detail">Population:</span> {{ country.population }}
             </p>
             <p class="card__text">
-                <span class="card__text-detail">Region:</span> Americas
+                <span class="card__text-detail">Region:</span> {{ country.region }}
             </p>
             <p class="card__text">
-                <span class="card__text-detail">Capital:</span> Washington DC
+                <span class="card__text-detail">Capital:</span> {{ country.capital }}
             </p>
         </div>
     </div>

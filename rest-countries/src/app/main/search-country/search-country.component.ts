@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./search-country.component.scss']
 })
 export class SearchCountryComponent {
-  continentArr: string[] = ['Africa', 'America', 'Asia', 'Europe', 'Ocenia'];
+    selectedOption: string = '0';
+    continentArr: string[] = ['Africa', 'Asia', 'Europe', 'North America', 'Ocenia', 'South America'];
 }
