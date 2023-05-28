@@ -3,8 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { CountryService } from '../main/country/country.service';
 import { Country } from '../main/country/country.model';
 import { Observable, mergeMap, of } from 'rxjs';
-import { map } from 'rxjs/operators'
-import { Currencies } from '../main/country/country.model';
+import { map, catchError } from 'rxjs/operators'
 
 @Component({
   selector: 'app-country-detail',
@@ -13,8 +12,9 @@ import { Currencies } from '../main/country/country.model';
 })
 export class CountryDetailComponent implements OnInit {
 
-  country$!: Observable<Country>;
+  country$!: Observable<Country | null>;
   borderCountries$!: Observable<Country[]>;
+  checkErrorCountry = false;
 
   constructor(private route: ActivatedRoute,
     private countryService: CountryService) { }
@@ -36,6 +36,10 @@ export class CountryDetailComponent implements OnInit {
           this.borderCountries$ = this.countryService.getCountriesByCodes(res.borders);
         }
         return of(res);
+      }),
+      catchError(error => {
+        this.checkErrorCountry = true;
+        return of(null);
       })
     )
   }

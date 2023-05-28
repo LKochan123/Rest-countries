@@ -1,4 +1,4 @@
-<section class="country wrapper" *ngIf="(country$ | async) as country">
+<section class="country wrapper" *ngIf="(country$ | async) as country; else fetchingData">
 
   <button class="country__btn" routerLink="/">
     <i class="fa-solid fa-magnifying-glass search__icon"></i>
@@ -71,9 +71,13 @@
         </div>
 
         <ng-template #zeroBorders>
-          <p>This country doesn't have any borders!</p>
+          <p class="country__border--error">This country doesn't have any borders!</p>
         </ng-template>
       </div>
     </div>
   </div>
 </section>
+
+<ng-template #fetchingData>
+  <app-loading-spinner></app-loading-spinner>
+</ng-template>

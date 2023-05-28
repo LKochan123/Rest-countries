@@ -4,3 +4,16 @@
     align-items: center;
     flex-wrap: wrap;
 }
+
+.error {
+    width: 100%;
+    padding: 1em;
+    background-color: yellow;
+
+    &__text {
+        font-size: 2.5rem;
+        color: red;
+        text-align: center;
+        font-weight: bold;
+    }
+}

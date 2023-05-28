@@ -44,6 +44,7 @@
     &__title {
         font-size: 1.6rem;
         margin: 1em 0;
+        color: var(--light-mode-text);
     }
 
     &__box--one > p,
@@ -63,9 +64,14 @@
     &__border {
         margin-top: 2em;
 
+        &--error {
+            color: var(--light-mode-text);
+        }
+
         &--title {
             font-size: 1.4rem;
             margin-bottom: 0.3em;
+            color: var(--light-mode-text);
         }
 
         &--btn {
@@ -84,6 +90,19 @@
                 background-color: var(--light-mode-text);
             }
         }
+    }
+}
+
+.error {
+    width: 100%;
+    padding: 1em;
+    background-color: yellow;
+
+    &__text {
+        font-size: 2.5rem;
+        color: red;
+        text-align: center;
+        font-weight: bold;
     }
 }
 
@@ -119,7 +138,7 @@
             }
 
             &--btn {
-                padding: 0.5em 1em;
+                padding: .7em 1.4em;
                 margin: 0 .8em .8em 0;
             }
         }

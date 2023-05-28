@@ -3,10 +3,18 @@
     (selectedOption)="onSelectedOption($event)">
 </app-search-country>
 <main class="countries wrapper">
-    <ng-container *ngIf="allCountries$ | async as countries">
+    <ng-container *ngIf="(allCountries$ | async) as countries; else fetchingData">
         <app-country
             *ngFor="let country of countries | CountryFilter:actualInput:selectedContinent"
             [country]="country">
         </app-country>
     </ng-container>
+
+    <div class="error" *ngIf="errorMessage">
+        <p class="error__text">Some error occured with fetching data!</p>
+    </div>
+
+    <ng-template #fetchingData>
+        <app-loading-spinner></app-loading-spinner>
+    </ng-template>
 </main>

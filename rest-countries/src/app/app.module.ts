@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { CountryDetailComponent } from './country-detail/country-detail.component';
 import { CountryPipe } from './pipes/continent.pipe';
+import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CountryPipe } from './pipes/continent.pipe';
     SearchCountryComponent,
     CountryComponent,
     CountryDetailComponent,
-    CountryPipe
+    CountryPipe,
+    LoadingSpinnerComponent
   ],
   imports: [
     BrowserModule,

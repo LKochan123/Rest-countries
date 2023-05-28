@@ -14,18 +14,20 @@
     &__icon {
         font-size: 1.2rem;
         margin: 0 1em 0 2em;
-        color: var(--light-mode-input);
+        color: var(--light-mode-text);
     }
 
     &__input {
         padding: 1em;
         border: none;
+        background-color: var(--dark-mode-text);
         color: var(--light-mode-text);
     }
 
     &__select {
         width: 60%;
         padding: 1.2em;
+        color: var(--light-mode-text);
         background-color: var(--dark-mode-text);
         box-shadow: 1px 1px 3px 0px var(--light-mode-input);
         border: none;
