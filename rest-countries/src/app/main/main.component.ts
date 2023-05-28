@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CountryService } from './country/country.service';
 import { Country } from './country/country.model';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-main',
@@ -9,13 +10,21 @@ import { Country } from './country/country.model';
 })
 export class MainComponent implements OnInit {
 
-  allCountries: Country[] = [];
+  allCountries$!: Observable<Country[]>;
+  selectedContinent: string = '';
+  actualInput: string = '';
 
   constructor(private countryService: CountryService) { }
 
   ngOnInit() {
-    this.countryService.getAllCountries().subscribe(responseData => {
-      this.allCountries = responseData;
-    });
+    this.allCountries$ = this.countryService.getAllCountries();
+  }
+
+  onSelectedOption(actualContinent: string) {
+    this.selectedContinent = actualContinent;
+  }
+
+  onInputValue(actualInput: string) {
+    this.actualInput = actualInput;
   }
 }

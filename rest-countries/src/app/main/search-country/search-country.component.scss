@@ -6,6 +6,7 @@
             width: 100%;
             padding: 0.5em;
             background-color: var(--dark-mode-text);
+            box-shadow: 1px 1px 2px 0px var(--light-mode-input);
             border-radius: 8px;
         }
     }
@@ -13,17 +14,20 @@
     &__icon {
         font-size: 1.2rem;
         margin: 0 1em 0 2em;
+        color: var(--light-mode-input);
     }
 
     &__input {
         padding: 1em;
         border: none;
+        color: var(--light-mode-text);
     }
 
     &__select {
         width: 60%;
         padding: 1.2em;
         background-color: var(--dark-mode-text);
+        box-shadow: 1px 1px 3px 0px var(--light-mode-input);
         border: none;
         border-radius: 8px;
     }

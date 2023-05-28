@@ -1,7 +1,12 @@
-<app-search-country></app-search-country>
+<app-search-country
+    (inputValue)="onInputValue($event)"
+    (selectedOption)="onSelectedOption($event)">
+</app-search-country>
 <main class="countries wrapper">
-    <app-country 
-        *ngFor="let country of allCountries | ContinentPipe:'South America' "
-        [country]="country">
-    </app-country>
+    <ng-container *ngIf="allCountries$ | async as countries">
+        <app-country
+            *ngFor="let country of countries | CountryFilter:actualInput:selectedContinent"
+            [country]="country">
+        </app-country>
+    </ng-container>
 </main>

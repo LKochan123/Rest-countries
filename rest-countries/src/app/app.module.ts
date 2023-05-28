@@ -9,7 +9,7 @@ import { CountryComponent } from './main/country/country.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { CountryDetailComponent } from './country-detail/country-detail.component';
-import { ContinentPipe } from './pipes/continent.pipe';
+import { CountryPipe } from './pipes/continent.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { ContinentPipe } from './pipes/continent.pipe';
     SearchCountryComponent,
     CountryComponent,
     CountryDetailComponent,
-    ContinentPipe
+    CountryPipe
   ],
   imports: [
     BrowserModule,

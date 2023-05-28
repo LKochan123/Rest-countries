@@ -4,22 +4,26 @@
             <div class="search__box search__box--one">
                 <i class="fa-solid fa-magnifying-glass search__icon"></i>
                 <input
+                    #searchCountry
+                    (input)="onSearch(searchCountry.value)"
                     type="text"
                     class="search__input" 
                     placeholder="Search for a country...">
             </div>
     
             <div class="search__box">
-                <select class="search__select">
-                    <option 
-                        disabled 
-                        selected 
-                        value="0">
+                <select  
+                    #continents 
+                    (change)="onSelect(continents.value)"
+                    class="search__select">
+
+                    <option disabled selected value="">
                         Filter by Region
                     </option>
+
                     <option 
                         *ngFor="let continent of continentArr"
-                        value="{{ continent | lowercase }}" >
+                        [value]="continent" >
                         {{ continent }}
                     </option>
                 </select>

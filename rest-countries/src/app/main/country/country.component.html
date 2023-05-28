@@ -1,4 +1,4 @@
-<div class="card" [routerLink]="'/' + country.name.common">
+<article class="card" [routerLink]="'/' + country.name.common">
     <div class="card__top">
         <img 
             [src]="country.flags.png"
@@ -9,7 +9,7 @@
         <h3 class="card__title">{{ country.name.common }}</h3>
         <div class="card__info">
             <p class="card__text">
-                <span class="card__text-detail">Population:</span> {{ country.population }}
+                <span class="card__text-detail">Population:</span> {{ country.population | number:'1.0' }}
             </p>
             <p class="card__text">
                 <span class="card__text-detail">Region:</span> {{ country.region }}
@@ -19,4 +19,4 @@
             </p>
         </div>
     </div>
-</div>
+</article>

@@ -18,4 +18,8 @@ export class CountryService {
     getCountryByName(name: string) {
         return this.http.get<Country>(`${this._url}/name/${name}`);
     }
+
+    getCountriesByCodes(codes: string[]) {
+        return this.http.get<Country[]>(`${this._url}/alpha?codes=${codes.join(',')}`);
+    }
 }

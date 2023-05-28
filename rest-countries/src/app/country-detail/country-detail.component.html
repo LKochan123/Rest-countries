@@ -1,2 +1,79 @@
-<p>{{ country.name.common }}</p>
-<p> ASasdsadasdadasd </p>
+<section class="country wrapper" *ngIf="(country$ | async) as country">
+
+  <button class="country__btn" routerLink="/">
+    <i class="fa-solid fa-magnifying-glass search__icon"></i>
+    <p class="country__btn--text">Back</p>
+  </button>
+
+  <div class="country__section">
+
+    <div class="country__img">
+      <img
+      [src]="country.flags.png"
+      [alt]="country.flags.alt"
+      class="country__img--flag"
+      />
+    </div>
+
+    <div class="country__info">
+      <h3 class="country__title">{{ country.name.common }}</h3>
+
+      <div class="country__box">
+        <div class="country__box--one">
+          <p>
+            <span class="country__span">Native Name:</span>
+            {{ displayNativeName(country.name.nativeName) }}
+          </p>
+          <p>
+            <span class="country__span">Population:</span>
+            {{ country.population | number:'1.0' }}
+          </p>
+          <p><span class="country__span">Region:</span> {{ country.region }}</p>
+          <p>
+            <span class="country__span">Sub Region:</span>
+            {{ country.subregion }}
+          </p>
+          <p>
+            <span class="country__span">Capital:</span> {{ country.capital }}
+          </p>
+        </div>
+
+        <div class="country__box--two">
+          <p>
+            <span class="country__span">Top Level Domain:</span>
+            {{ country.tld }}
+          </p>
+          <p>
+            <span class="country__span">Currencies:</span>
+            {{ displayCurrencies(country.currencies) }}
+          </p>
+          <p>
+            <span class="country__span">Languages:</span> 
+            {{ displayLanguages(country.languages) }}
+          </p>
+        </div>
+      </div>
+
+      <div class="country__border">
+        <h5 class="country__border--title">Border Countries:</h5>
+
+        <div 
+          class="country__border--box" 
+          *ngIf="(borderCountries$ | async) as borderCountries; else zeroBorders">
+
+          <button
+            class="country__border--btn"
+            [routerLink]="'/'+ borderCountry.name.common"
+            *ngFor="let borderCountry of borderCountries">
+            {{ borderCountry.name.common }}
+          </button>
+          
+        </div>
+
+        <ng-template #zeroBorders>
+          <p>This country doesn't have any borders!</p>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</section>
