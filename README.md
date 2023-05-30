@@ -14,3 +14,8 @@
 - learn something about geography 🙂
 
 ### Screenshots
+<img src="./rest-countries/src/assets/Home_screen_white.jpg">
+<img src="./rest-countries/src/assets/Filtering_dark.jpg">
+<img src="./rest-countries/src/assets/Input_dark.jpg">
+<!-- <img src="./rest-countries/src/assets/Datail_page_white.jpg"> -->
+<img src="./rest-countries/src/assets/Detail_mobile.jpg">
