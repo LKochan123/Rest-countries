@@ -9,7 +9,7 @@ export class HeaderComponent {
   
   constructor(private renderer: Renderer2) { }
 
-  title: string = "Where in the word?";
+  title = "Where in the word?";
   isLightMode = true;
 
   onToggleTheme() {

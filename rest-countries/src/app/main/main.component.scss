@@ -17,3 +17,13 @@
         font-weight: bold;
     }
 }
+
+.loading-spinner {
+    margin: 0 auto;
+}
+
+@media (min-width: 1200px ) {
+    .countries {
+        justify-content: space-between;
+    }
+}

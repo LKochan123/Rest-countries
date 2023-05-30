@@ -1,7 +1,7 @@
 <section class="country wrapper" *ngIf="(country$ | async) as country; else fetchingData">
 
   <button class="country__btn" routerLink="/">
-    <i class="fa-solid fa-magnifying-glass search__icon"></i>
+    <i class="fa-solid fa-arrow-left"></i>
     <p class="country__btn--text">Back</p>
   </button>
 
@@ -78,6 +78,13 @@
   </div>
 </section>
 
+<div class="error" *ngIf="checkErrorCountry">
+  <p class="error__text">Some error occured with fetching this country!</p>
+</div>
+
 <ng-template #fetchingData>
-  <app-loading-spinner></app-loading-spinner>
+  <app-loading-spinner
+    *ngIf="!checkErrorCountry" 
+    class="loading-spinner">
+  </app-loading-spinner>
 </ng-template>
