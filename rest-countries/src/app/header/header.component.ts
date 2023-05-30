@@ -14,7 +14,7 @@ export class HeaderComponent {
 
   onToggleTheme() {
     const body = document.body;
-    this.isLightMode = false;
+    this.isLightMode = !this.isLightMode;
     body.classList.contains('dark') ? this.renderer.removeClass(body, 'dark') : this.renderer.addClass(body, 'dark');
   }
 }
