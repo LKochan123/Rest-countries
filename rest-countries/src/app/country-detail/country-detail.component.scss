@@ -49,9 +49,8 @@
         color: var(--light-mode-text);
     }
 
-    &__box--one,
-    &__box--two {
-        width: 50%;
+    &__box--one {
+        margin-bottom: 1.5em;
     }
 
     &__box--one > p,
@@ -144,6 +143,15 @@
             &--one {
                 margin-right: 3em;
             }
+        }
+
+        &__box--one {
+            margin-bottom: 0;
+        }
+
+        &__box--one,
+        &__box--two {
+            width: 50%;
         }
 
         &__border {
